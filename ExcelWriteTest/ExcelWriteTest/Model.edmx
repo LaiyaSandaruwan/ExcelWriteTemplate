@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="LogixFMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="IssuingDet">
+          <Key>
+            <PropertyRef Name="numIssDetID" />
+          </Key>
+          <Property Name="numIssDetID" Type="numeric" Precision="18" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="numIssID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="varCaseNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="varCartonNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="varPLNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="numSKUID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="varLotNo" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="dteMftdDate" Type="datetime" Nullable="false" />
+          <Property Name="dteExpireDate" Type="datetime" Nullable="false" />
+          <Property Name="varUOMCode" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="chrProdStatCode" Type="char" MaxLength="2" Nullable="false" />
+          <Property Name="numLocationID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="numPODetID" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="numPreIssuDetID" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="varCrtnNo" Type="varchar" MaxLength="20" />
+          <Property Name="numOrderQTY" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="numConfirmQTY" Type="numeric" Precision="18" Scale="2" />
+          <Property Name="varRemarks" Type="varchar" MaxLength="100" />
+          <Property Name="numNewCrtn" Type="numeric" Precision="8" Scale="0" />
+          <Property Name="numPolybagsUsed" Type="numeric" Precision="8" Scale="0" />
+          <Property Name="varCreateBy" Type="varchar" MaxLength="5" />
+          <Property Name="dteCreateOn" Type="datetime" />
+          <Property Name="varUpdateBy" Type="varchar" MaxLength="5" />
+          <Property Name="dteUpdateOn" Type="datetime" />
+          <Property Name="varSSCCNumber" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="LogixFMModelStoreContainer">
+          <EntitySet Name="IssuingDet" EntityType="Self.IssuingDet" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="LogixFMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="IssuingDet">
+          <Key>
+            <PropertyRef Name="numIssDetID" />
+          </Key>
+          <Property Name="numIssDetID" Type="Decimal" Precision="18" Scale="0" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="numIssID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="varCaseNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="varCartonNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="varPLNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="numSKUID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="varLotNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="dteMftdDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="dteExpireDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="varUOMCode" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="chrProdStatCode" Type="String" MaxLength="2" FixedLength="true" Unicode="false" Nullable="false" />
+          <Property Name="numLocationID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="numPODetID" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="numPreIssuDetID" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="varCrtnNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="numOrderQTY" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="numConfirmQTY" Type="Decimal" Precision="18" Scale="2" />
+          <Property Name="varRemarks" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="numNewCrtn" Type="Decimal" Precision="8" Scale="0" />
+          <Property Name="numPolybagsUsed" Type="Decimal" Precision="8" Scale="0" />
+          <Property Name="varCreateBy" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="dteCreateOn" Type="DateTime" Precision="3" />
+          <Property Name="varUpdateBy" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="dteUpdateOn" Type="DateTime" Precision="3" />
+          <Property Name="varSSCCNumber" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="LogixFMEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="IssuingDets" EntityType="Self.IssuingDet" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="LogixFMModelStoreContainer" CdmEntityContainer="LogixFMEntities">
+          <EntitySetMapping Name="IssuingDets">
+            <EntityTypeMapping TypeName="LogixFMModel.IssuingDet">
+              <MappingFragment StoreEntitySet="IssuingDet">
+                <ScalarProperty Name="numIssDetID" ColumnName="numIssDetID" />
+                <ScalarProperty Name="numIssID" ColumnName="numIssID" />
+                <ScalarProperty Name="varCaseNo" ColumnName="varCaseNo" />
+                <ScalarProperty Name="varCartonNo" ColumnName="varCartonNo" />
+                <ScalarProperty Name="varPLNo" ColumnName="varPLNo" />
+                <ScalarProperty Name="numSKUID" ColumnName="numSKUID" />
+                <ScalarProperty Name="varLotNo" ColumnName="varLotNo" />
+                <ScalarProperty Name="dteMftdDate" ColumnName="dteMftdDate" />
+                <ScalarProperty Name="dteExpireDate" ColumnName="dteExpireDate" />
+                <ScalarProperty Name="varUOMCode" ColumnName="varUOMCode" />
+                <ScalarProperty Name="chrProdStatCode" ColumnName="chrProdStatCode" />
+                <ScalarProperty Name="numLocationID" ColumnName="numLocationID" />
+                <ScalarProperty Name="numPODetID" ColumnName="numPODetID" />
+                <ScalarProperty Name="numPreIssuDetID" ColumnName="numPreIssuDetID" />
+                <ScalarProperty Name="varCrtnNo" ColumnName="varCrtnNo" />
+                <ScalarProperty Name="numOrderQTY" ColumnName="numOrderQTY" />
+                <ScalarProperty Name="numConfirmQTY" ColumnName="numConfirmQTY" />
+                <ScalarProperty Name="varRemarks" ColumnName="varRemarks" />
+                <ScalarProperty Name="numNewCrtn" ColumnName="numNewCrtn" />
+                <ScalarProperty Name="numPolybagsUsed" ColumnName="numPolybagsUsed" />
+                <ScalarProperty Name="varCreateBy" ColumnName="varCreateBy" />
+                <ScalarProperty Name="dteCreateOn" ColumnName="dteCreateOn" />
+                <ScalarProperty Name="varUpdateBy" ColumnName="varUpdateBy" />
+                <ScalarProperty Name="dteUpdateOn" ColumnName="dteUpdateOn" />
+                <ScalarProperty Name="varSSCCNumber" ColumnName="varSSCCNumber" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
